@@ -9,6 +9,7 @@
   "author": "Alvaro Castillo",
   "license": "MIT",
   "dependencies": {
+    "got": "^6.7.1",
     "hapi": "^13.5.3",
     "nodemon": "^1.11.0"
   }
