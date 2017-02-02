@@ -9,6 +9,7 @@
   "author": "Alvaro Castillo",
   "license": "MIT",
   "dependencies": {
+    "geolib": "^2.0.22",
     "got": "^6.7.1",
     "hapi": "^13.5.3",
     "joi": "^10.2.1",
