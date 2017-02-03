@@ -7,9 +7,10 @@ server.connection({
 	host: config.api.host
 });
 
-const routes = require('./lib/api/routes.js');
+// const routes = require('./lib/api/routes.js');
 
 const plugins = [
+	require('./lib/api'),
 	{
 		register: require('good'),
 		options: {
@@ -18,6 +19,9 @@ const plugins = [
 				events: { response: '*'}
 			}]
 		}
+	},
+	{
+		register: require('vision')
 	}
 ];
 
@@ -26,7 +30,7 @@ server.register(plugins, (err) => {
 		throw err;
 	}
 
-	server.route(routes);
+	// server.route(routes);
 
 	server.start((err) => {
 
