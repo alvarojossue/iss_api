@@ -7,7 +7,7 @@ server.connection({
 	host: config.api.host
 });
 
-const routes = require('./lib/location/routes.js');
+const routes = require('./lib/api/routes.js');
 
 const plugins = [
 	{
