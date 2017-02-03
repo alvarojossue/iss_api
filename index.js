@@ -1,9 +1,11 @@
+// Configuration
 const config = require('config');
 
 const Hapi = require('hapi');
 const Inert = require('inert');
 const Vision = require('vision');
 
+// Hapi server
 const server = new Hapi.Server();
 
 server.connection({ 
@@ -11,7 +13,10 @@ server.connection({
 	host: config.api.host
 });
 
+//Included plugins
 const plugins = [
+	Inert,
+	Vision,
 	require('./lib/api'),
 	require('./lib/client'),
 	{
@@ -22,9 +27,7 @@ const plugins = [
 				events: { response: '*'}
 			}]
 		}
-	},
-	Inert,
-	Vision
+	}
 ];
 
 server.register(plugins, (err) => {
