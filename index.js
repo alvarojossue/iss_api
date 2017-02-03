@@ -1,5 +1,9 @@
 const config = require('config');
+
 const Hapi = require('hapi');
+const Inert = require('inert');
+const Vision = require('vision');
+
 const server = new Hapi.Server();
 
 server.connection({ 
@@ -7,10 +11,9 @@ server.connection({
 	host: config.api.host
 });
 
-// const routes = require('./lib/api/routes.js');
-
 const plugins = [
 	require('./lib/api'),
+	require('./lib/client'),
 	{
 		register: require('good'),
 		options: {
@@ -20,17 +23,14 @@ const plugins = [
 			}]
 		}
 	},
-	{
-		register: require('vision')
-	}
+	Inert,
+	Vision
 ];
 
 server.register(plugins, (err) => {
 	if (err) {
 		throw err;
 	}
-
-	// server.route(routes);
 
 	server.start((err) => {
 
