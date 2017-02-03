@@ -9,6 +9,7 @@
   "author": "Alvaro Castillo",
   "license": "MIT",
   "dependencies": {
+    "config": "^1.25.1",
     "geolib": "^2.0.22",
     "good": "^6.6.3",
     "good-console": "^5.3.2",

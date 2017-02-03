@@ -1,7 +1,11 @@
+const config = require('config');
 const Hapi = require('hapi');
 const server = new Hapi.Server();
 
-server.connection({ port: 4000, host: 'localhost'});
+server.connection({ 
+	port: config.api.port, 
+	host: config.api.host
+});
 
 const routes = require('./lib/location/routes.js');
 
@@ -21,8 +25,6 @@ server.register(plugins, (err) => {
 	if (err) {
 		throw err;
 	}
-
-	// Adding routes to the server
 
 	server.route(routes);
 
