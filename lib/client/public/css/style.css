@@ -1,3 +1,16 @@
 [v-cloak] {
 	display: none;
 }
+
+#logo {
+	width: 25%;
+	margin-top: 30px;
+}
+
+#app {
+	text-align: center;
+}
+
+input {
+	text-align: center;
+}
