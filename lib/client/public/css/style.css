@@ -14,3 +14,15 @@
 input {
 	text-align: center;
 }
+
+.wrap {
+	min-height: calc(100vh - 65px);
+}
+
+footer.page-footer {
+	padding-top: 0;
+}
+
+#footer-text {
+	text-align: center;
+}
