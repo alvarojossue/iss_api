@@ -11,18 +11,45 @@
 	text-align: center;
 }
 
-input {
-	text-align: center;
+.container {
+	padding-left: 200px;
 }
 
 .wrap {
 	min-height: calc(100vh - 50px);
 }
 
+.side-nav {
+	width: 200px;
+	height: calc(100vh - 50px);
+	box-shadow: 0 0px 0px 0 rgba(0,0,0,0), 0 0px 0px 0 rgba(0,0,0,0), 0 0px 0px -0px rgba(0,0,0,0);
+	background-color: #5b7399;
+}
+
+.side-nav li a {
+	color: #ffffff;
+}
+
+input {
+	text-align: center;
+}
+
 footer.page-footer {
 	padding-top: 0;
+	background-color: #435572;
 }
 
 #footer-text {
 	text-align: center;
+	padding-right: 200px;
+}
+
+@media only screen and (max-width : 992px) {
+	.container {
+		padding-left: 0;
+	}
+
+	#footer-text {
+		padding-right: 0px;
+	}
 }
