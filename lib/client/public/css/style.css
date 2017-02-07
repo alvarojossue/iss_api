@@ -16,7 +16,7 @@ input {
 }
 
 .wrap {
-	min-height: calc(100vh - 65px);
+	min-height: calc(100vh - 50px);
 }
 
 footer.page-footer {
